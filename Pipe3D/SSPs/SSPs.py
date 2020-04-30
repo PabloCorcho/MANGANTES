@@ -24,11 +24,11 @@ class Pipe3Dssp(object):
      
         hdul = fits.open(self.ssps_path)
         
-        norm = np.zeros(156)
+        norm = np.ones(156)
         for i in range(156):
             norm[i] = hdul[0].header['NORM'+str(i)]
             
-        self.ssp_SED = hdul[0].data*norm[:, np.newaxis]
+        self.ssp_SED = hdul[0].data*norm[:, np.newaxis] #Lsun
         
         wl0 = hdul[0].header['CRVAL1']
         deltawl = hdul[0].header['CDELT1']
@@ -115,5 +115,5 @@ if __name__ == '__main__':
     # plt.plot(ssp_mass/lum_mass_relation, '-o')
     # plt.plot(1/ssps[:, 1000])
 
-    np.savetxt('/home/pablo/obs_data/MANGA/Pipe3D/SSPs/mass_lum_rel.dat', ssp_mass/lum_mass_relation)
+    
 # ...
