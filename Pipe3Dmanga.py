@@ -90,7 +90,7 @@ class Pipe3Dmanga(MANGA, Pipe3Dssp):
             self.luminosity_distance = self.pipe3d_luminnosity_distance(unit='cm')
             self.luminosity = self.flux_to_luminosity()
         
-                
+                                
         ssp_mass_to_lum = self.ssp_initial_mass_lum_ratio(mode)
         ssp_alive_stellar_mass = self.ssp_alive_stellar_mass(mode)      
         ssp_weights = self.get_SFHweights(mode)        
@@ -109,31 +109,48 @@ class Pipe3Dmanga(MANGA, Pipe3Dssp):
             self.compute_ssp_masses(mode)
             
         if mode=='individual':
-            self.mass_at_time = np.sum(
+            self.total_ssp_mass = np.sum(
                         self.ssp_masses.reshape(4, 39, 
                                       self.ssp_masses.shape[1], 
                                       self.ssp_masses.shape[2]), 
                                              axis=0)
         elif mode=='age':
-            self.mass_at_time = self.ssp_masses
+            self.total_ssp_mass = self.ssp_masses
             
             
         ages = self.ssp_ages(mode='age') # 39 different ages
-        self.time =  ages[::-1] #from old to young
+        ages =  ages[::-1] #from old to young
                         
-        self.mass_at_time = self.mass_at_time[::-1, :, :]
+        self.total_ssp_mass = self.total_ssp_mass[::-1, :, :]
         
         
         self.stellar_mass_history = np.cumsum(
-            self.mass_at_time, axis=0) 
+            self.total_ssp_mass, axis=0) 
         
-        self.star_formation_history = -np.diff(self.stellar_mass_history,
-                      axis=0)/np.diff(self.time)[:, np.newaxis, np.newaxis]
+        self.time_bins = ages[0] - ages 
+        self.time = (self.time_bins[1:]+self.time_bins[:-1])/2
+        
+        self.star_formation_history = (
+            self.stellar_mass_history[1:]-self.stellar_mass_history[:-1])/(
+            self.time_bins[1:, np.newaxis, np.newaxis]-\
+            self.time_bins[:-1, np.newaxis, np.newaxis])
+                
+        self.stellar_mass_history = (
+                                     self.stellar_mass_history[1:, :, :]+\
+                                     self.stellar_mass_history[0:-1, : , :]
+                                     )/2
         
         self.specific_star_formation_history = self.star_formation_history/(
-        self.stellar_mass_history[1:, :, :]/2 + self.stellar_mass_history[0:-1, : , :]/2)
-        self.sfh_times = (self.time[0:-1] + self.time[1:])/2
+                                                    self.stellar_mass_history)        
         
+    def integrated_mass_history(self):
+        return np.sum(self.stellar_mass_history, axis=(1,2))
+    
+    def integrated_star_formation_history(self):
+        return np.sum(self.star_formation_history, axis=(1,2))
+    
+    def mass_to_density(self, mass_array):
+        return mass_array/self.spaxel_area/4/np.pi        
         
 # =============================================================================
 # Example        
@@ -149,18 +166,21 @@ if __name__ == '__main__':
     
     SFH = galaxy.star_formation_history
     sSFH = galaxy.specific_star_formation_history
-    M_history = galaxy.stellar_mass_history    
-    M_history = (M_history[1:, :, :] + M_history[0:-1, : , :])/2
+    M_history = galaxy.stellar_mass_history
+    
     time = galaxy.time
-    time_sfh = (time[0:-1] + time[1:])/2
+    # time_sfh = (time[0:-1] + time[1:])/2
     
     
     plt.figure()
-    plt.semilogy(np.log10(time_sfh), np.sum(SFH,axis=(1,2))/np.sum(M_history,
-                                                        axis=(1,2)), '.-')
+    plt.semilogy(np.log10(time), galaxy.integrated_star_formation_history()/galaxy.integrated_mass_history(),
+                 '.-')
     
-    last_100My = np.where(time_sfh<1e9)[0]    
+    last_100My = np.where(time>14e9)[0]    
     M_today = galaxy.stellar_mass_history[-1]        
+    plt.figure()
+    plt.hist(np.log10(np.mean(sSFH[last_100My, :, :], axis=0)).flatten(), bins=30, density=True,
+             histtype='step')
     
     fig = plt.figure()
     ax = fig.add_subplot(121)
