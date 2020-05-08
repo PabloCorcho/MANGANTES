@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -43,7 +42,7 @@
   
   
 
-  <meta name="request-id" content="C710:E299:BB862:117074:5EB4F797" data-pjax-transient="true"/><meta name="html-safe-nonce" content="33e9e8ce63bb378604dbb6bd001d98bb8742bc05" data-pjax-transient="true"/><meta name="visitor-payload" content="eyJyZWZlcnJlciI6IiIsInJlcXVlc3RfaWQiOiJDNzEwOkUyOTk6QkI4NjI6MTE3MDc0OjVFQjRGNzk3IiwidmlzaXRvcl9pZCI6IjQxMDA2ODkzMzEwMzcyMDY0MjMiLCJyZWdpb25fZWRnZSI6ImFtcyIsInJlZ2lvbl9yZW5kZXIiOiJhbXMifQ==" data-pjax-transient="true"/><meta name="visitor-hmac" content="d98ba2ba4798b6be00d22f7dec4b1e6e861adc459bf598f546665fd3c4649d04" data-pjax-transient="true"/>
+  <meta name="request-id" content="DFC4:E29C:2313F9:34282C:5EB4FC5F" data-pjax-transient="true"/><meta name="html-safe-nonce" content="41e4c0ac107304f804a65c0655fe4bd6e124af3d" data-pjax-transient="true"/><meta name="visitor-payload" content="eyJyZWZlcnJlciI6IiIsInJlcXVlc3RfaWQiOiJERkM0OkUyOUM6MjMxM0Y5OjM0MjgyQzo1RUI0RkM1RiIsInZpc2l0b3JfaWQiOiI4NzI1MDUwNTA2NjI0Njk1MzkxIiwicmVnaW9uX2VkZ2UiOiJhbXMiLCJyZWdpb25fcmVuZGVyIjoiYW1zIn0=" data-pjax-transient="true"/><meta name="visitor-hmac" content="423036f6b7c58d6ca387a698f6277abd6d42447de631c567ff56c0887426d51f" data-pjax-transient="true"/>
 
 
 
@@ -289,7 +288,7 @@
           spellcheck="false"
           autocomplete="off"
           >
-          <input type="hidden" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" value="mqC1SXUfbcO+RcNR3zanGMSv1WrbTNFm86RQZPPoMMRH6GrY/yqgGzsgZ09kJglnh7cqXkNKboV/klG3Pz81sw==" />
+          <input type="hidden" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" value="+waCS4cJhBrJEggBgdAvz90LWc9sSiGaNBGf29Zj85M9f1F6Itcycn/ZDQwpzqIHnJn57J9uYl763oWsL73IlA==" />
           <input type="hidden" class="js-site-search-type-field" name="type" >
             <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
 
@@ -673,9 +672,9 @@
   
 
 
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/PabloCorcho/MANGANTES/blob/18629e8b1e314acbdab625eca517f7a25d3c9efd/README.md">Permalink</a>
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/PabloCorcho/MANGANTES/blob/e5fdbc0f67affa9048b8da279d6e9436def2302d/README.md">Permalink</a>
 
-    <!-- blob contrib key: blob_contributors:v22:b778fe7621276e219afda7e428dc58fe -->
+    <!-- blob contrib key: blob_contributors:v22:e7f283106027477293958edef3338194 -->
       <signup-prompt-controller class="signup-prompt-bg rounded-1" data-prompt="signup" hidden>
     <div class="signup-prompt p-4 text-center mb-4 rounded-1">
       <div class="position-relative">
@@ -747,45 +746,16 @@
 
 
 
-    
-  <div class="Box Box--condensed d-flex flex-column flex-shrink-0 mb-3">
-      <div class="Box-body d-flex flex-justify-between bg-blue-light flex-column flex-md-row flex-items-start flex-md-items-center">
-        <span class="pr-md-4 f6">
-          <a rel="author" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/PabloCorcho/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/PabloCorcho"><img class="avatar avatar-user" src="https://avatars2.githubusercontent.com/u/52422053?s=40&amp;v=4" width="20" height="20" alt="@PabloCorcho" /></a>
-          <a class="text-bold link-gray-dark lh-default v-align-middle" rel="author" data-hovercard-type="user" data-hovercard-url="/users/PabloCorcho/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/PabloCorcho">PabloCorcho</a>
-            <span class="lh-default v-align-middle">
-              <a data-pjax="true" title="Create README.md" class="link-gray" href="/PabloCorcho/MANGANTES/commit/18629e8b1e314acbdab625eca517f7a25d3c9efd">Create README.md</a>
-            </span>
-        </span>
-        <span class="d-inline-block flex-shrink-0 v-align-bottom f6 mt-2 mt-md-0">
-          <a class="pr-2 text-mono link-gray" href="/PabloCorcho/MANGANTES/commit/18629e8b1e314acbdab625eca517f7a25d3c9efd" data-pjax>18629e8</a>
-          <relative-time datetime="2020-05-08T06:06:51Z" class="no-wrap">May 8, 2020</relative-time>
-        </span>
+    <include-fragment src="/PabloCorcho/MANGANTES/contributors/master/README.md" class="Box Box--condensed commit-loader">
+      <div class="Box-body bg-blue-light f6">
+        Fetching contributors&hellip;
       </div>
 
-    <div class="Box-body d-flex flex-items-center flex-auto f6 border-bottom-0 flex-wrap" >
-      <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark float-left mr-2" id="blob_contributors_box">
-        <summary class="btn-link">
-          <span><strong>1</strong> contributor</span>
-        </summary>
-        <details-dialog
-          class="Box Box--overlay d-flex flex-column anim-fade-in fast"
-          aria-label="Users who have contributed to this file"
-          src="/PabloCorcho/MANGANTES/contributors-list/master/README.md" preload>
-          <div class="Box-header">
-            <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog>
-              <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
-            </button>
-            <h3 class="Box-title">
-              Users who have contributed to this file
-            </h3>
-          </div>
-          <include-fragment class="octocat-spinner my-3" aria-label="Loading..."></include-fragment>
-        </details-dialog>
-      </details>
-    </div>
-  </div>
-
+      <div class="Box-body d-flex flex-items-center" >
+        <img alt="" class="loader-loading mr-2" src="https://github.githubassets.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" height="16" />
+        <span class="text-red h6 loader-error">Cannot retrieve contributors at this time</span>
+      </div>
+</include-fragment>
 
 
 
@@ -797,9 +767,9 @@
 <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
   <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
 
-      13 lines (8 sloc)
+      16 lines (10 sloc)
       <span class="file-info-divider"></span>
-    423 Bytes
+    573 Bytes
   </div>
 
   <div class="d-flex py-1 py-md-0 flex-auto flex-order-1 flex-md-order-2 flex-sm-grow-0 flex-justify-between">
@@ -841,7 +811,7 @@
 <p>This package provides:</p>
 <ul>
 <li>
-<p>basic tools to interact with MANGA 3D data cubes either locally or remotely
+<p>Basic tools to interact with MANGA 3D data cubes either locally or remotely
 (using MARVIN <a href="https://www.sdss.org/dr16/manga/marvin/" rel="nofollow">https://www.sdss.org/dr16/manga/marvin/</a>).</p>
 </li>
 <li>
@@ -850,6 +820,8 @@
 and reconstruct star formation histories (locally).</p>
 </li>
 </ul>
+<p>Simple Stellar Populations</p>
+<p>Pipe3D works with GRANADA-MILES SSPs therefore to recover SFHs we must consider their corresponding ages and M/L ratios.</p>
 </article>
   </div>
 
@@ -968,18 +940,3 @@ and reconstruct star formation histories (locally).</p>
   </body>
 </html>
 
-=======
-# MANGANTES
-MANGA New Tools for Extragalactic Statistics
-
-
-This package provides:
-  - basic tools to interact with MANGA 3D data cubes either locally or remotely 
-    (using MARVIN https://www.sdss.org/dr16/manga/marvin/).
-
-  - A Pipe3D class to deal with Pip3D data products 
-    (https://www.sdss.org/dr15/manga/manga-data/manga-pipe3d-value-added-catalog/) 
-    and reconstruct star formation histories (locally).
-  
-  
->>>>>>> 18629e8b1e314acbdab625eca517f7a25d3c9efd
